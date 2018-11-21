@@ -13,12 +13,12 @@ from urllib.request import urlopen
 from arcgis.features.manage_data import extract_data
 
 print("\n\nPortal-tier Authentication with LDAP - enterprise user")
-gisldap = GIS(r"https://tpa-gip01-vp.tampaairport.com:7443/arcgis", "portaladmin", "YvMMUaZUmly5ZADCVLcq")
+gisldap = GIS(r"", "portaladmin", "YvMMUaZUmly5ZkllADCVLcq")
 print("Logged in as: " + gisldap.properties.user.username)
 token = gisldap._con.token
 
 # Create csv file and write the header in csv
-dir = r"C:\Projects\airports\tampa"
+dir = r""
 log_path = os.path.join(dir,'log.csv')
 logger = open(log_path,"w")
 logger.write("owner,id,title,type,url" + "\n")
